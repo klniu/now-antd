@@ -7,7 +7,7 @@ import {ServerResult} from '../common/commons';
 import {FormEvent} from 'react';
 import '../styles/user.css';
 
-interface LoginAndPasswordFormProps extends FormComponentProps {
+export interface LoginAndPasswordFormProps extends FormComponentProps {
     operate: 'login' | 'changePass';
     url: string; // url to send request
     jumpUrl: string; // url jumping when successful

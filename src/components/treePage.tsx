@@ -56,7 +56,7 @@ export interface TreePageStates {
   formModalProps: FormModalProps;
 }
 
-class TreePage extends React.Component<TreePageProps, TreePageStates> {
+export default class TreePage extends React.Component<TreePageProps, TreePageStates> {
   state: TreePageStates = {
     loading: false,
 
@@ -493,5 +493,3 @@ class TreePage extends React.Component<TreePageProps, TreePageStates> {
     );
   }
 }
-
-export default TreePage;

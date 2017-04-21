@@ -1,7 +1,7 @@
-export * from './components/form';
-export * from './components/formModal';
-export * from './components/header';
-export * from './components/searchForm';
-export * from './components/treePage';
-export * from './components/upload';
-export * from './components/user';
+export {FormGroupProps, default as IForm} from './components/form';
+export {FormModalProps, default as IFormModal} from './components/formModal';
+export {HeaderProps, TitleLink, default as Header} from './components/header';
+export {SearchFormProps, default as SearchForm} from './components/searchForm';
+export {TreePageParam, TreePageProps, default as TreePage} from './components/treePage';
+export {UploadModalProps, default as UploadModal} from './components/upload';
+export {LoginAndPasswordFormProps as UserProps, default as User} from './components/user';
