@@ -1,0 +1,12 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"],
+        "node": true
+      },
+      "modules": false
+    }]
+  ],
+  "plugins": [["import", {"libraryName": "antd", "style": "css" }]]
+}

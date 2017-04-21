@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "es6",
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "declaration": true,
+    "jsx": "react",
+    "declarationDir": "dist/types",
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
