@@ -1,6 +1,6 @@
 {
   "name": "now-antd",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "keywords": [],
   "main": "dist/now-antd.js",
@@ -29,9 +29,7 @@
     "deploy-docs": "node tools/gh-pages-publish.js",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "commit": "git-cz",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "prepush": "npm run test:prod && npm run build",
-    "commitmsg": "validate-commit-msg"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "config": {
     "devPort": "8081",
@@ -80,7 +78,9 @@
     "@types/jest": "^18.1.1",
     "@types/node": "^7.0.2",
     "@types/webpack": "^2.2.7",
+    "awesome-typescript-loader": "^3.1.2",
     "babel-core": "^6.22.1",
+    "babel-loader": "^6.4.1",
     "babel-preset-env": "^1.2.0",
     "colors": "^1.1.2",
     "commitizen": "^2.9.5",
