@@ -1,4 +1,7 @@
+import * as React from 'react';
 import {ColumnField, FieldType} from './common/forms';
+import {PageParam} from './components/treePage';
+import {Button, message} from 'antd';
 
 export const formGroupProps: ColumnField[] = [
     {
@@ -123,3 +126,28 @@ export const formGroupProps: ColumnField[] = [
         label: 'Password',
     }
 ];
+
+export const treeParam: PageParam = {
+    name: '父表格',
+    table: {
+        url: '/TreePage/data',
+        columns: [
+            {
+                key: 'Name',
+                dataIndex: 'Name',
+                title: '名称'
+            }, {
+                key: 'Desc',
+                dataIndex: 'Desc',
+                title: '备注'
+            }, {
+                key: 'Operate',
+                dataIndex: 'Operate',
+                title: '操作',
+                render: (val) => {
+                    return (<Button onClick={() => message.success('ok')}>OK</Button>);
+                }
+            }
+        ]
+    }
+};

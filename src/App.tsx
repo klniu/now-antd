@@ -2,13 +2,14 @@ import * as React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import User from './components/user';
 import IForm from './components/form';
-import {formGroupProps} from './data';
+import {formGroupProps, treeParam} from './data';
 import IFormModal from './components/formModal';
 import Row from 'antd/lib/grid/row';
 import Col from 'antd/lib/grid/col';
 import {UploadModal} from './components/upload';
 import {Layout, message} from 'antd';
 import {default as Header, TitleLink} from './components/header';
+import TreePage from './components/treePage';
 
 class App extends React.Component<{}, {}> {
     render() {
@@ -18,6 +19,7 @@ class App extends React.Component<{}, {}> {
             {link: '/Form', name: 'Form'},
             {link: '/FormModal', name: 'FormModal'},
             {link: '/Upload', name: 'Upload'},
+            {link: '/TreePage', name: 'TreePage'},
             {link: '/message', name: 'TestHeaderOnClick', onClick: () => message.success('successufl')}
         ];
         return (
@@ -30,6 +32,7 @@ class App extends React.Component<{}, {}> {
                         <Route path="/Form" component={IFormTest}/>
                         <Route path="/FormModal" component={IFormModalTest}/>
                         <Route path="/Upload" component={UploadTest}/>
+                        <Route path="/TreePage" component={TreePageTest}/>
                     </div>
                 </Router>
             </Layout>
@@ -69,6 +72,12 @@ class IFormModalTest extends React.Component<any, any> {
 class UploadTest extends React.Component<any, any> {
     render() {
         return ( <UploadModal show={true} url="/upload/submit" accept=".xlsx"/>);
+    }
+}
+
+class TreePageTest extends React.Component<any, any> {
+    render() {
+        return ( <TreePage parentParams={treeParam}/>);
     }
 }
 

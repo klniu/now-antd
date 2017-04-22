@@ -11,7 +11,7 @@
   "author": "GaoXiang <hughgao01@gmail.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/klniu/now-antd.git"
   },
   "license": "MIT",
   "engines": {
@@ -81,6 +81,7 @@
     "awesome-typescript-loader": "^3.1.2",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.4.1",
+    "babel-plugin-import": "^1.1.1",
     "babel-preset-env": "^1.2.0",
     "colors": "^1.1.2",
     "commitizen": "^2.9.5",
