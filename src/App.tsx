@@ -4,10 +4,8 @@ import User from './components/user';
 import IForm from './components/form';
 import {formGroupProps, treeParam} from './data';
 import IFormModal from './components/formModal';
-import Row from 'antd/lib/grid/row';
-import Col from 'antd/lib/grid/col';
 import {UploadModal} from './components/upload';
-import {Layout, message} from 'antd';
+import {Layout, message, Row, Col} from 'antd';
 import {default as Header, TitleLink} from './components/header';
 import TreePage from './components/treePage';
 
@@ -23,16 +21,18 @@ class App extends React.Component<{}, {}> {
             {link: '/message', name: 'TestHeaderOnClick', onClick: () => message.success('successufl')}
         ];
         return (
-            <Layout className="App">
+            <Layout id="app">
                 <Router>
                     <div>
                         <Header logoUrl="" titles={links}/>
-                        <Route path="/user/Login" component={UserLogin}/>
-                        <Route path="/user/ChangePass" component={UserChangePass}/>
-                        <Route path="/Form" component={IFormTest}/>
-                        <Route path="/FormModal" component={IFormModalTest}/>
-                        <Route path="/Upload" component={UploadTest}/>
-                        <Route path="/TreePage" component={TreePageTest}/>
+                        <Layout.Content id="content">
+                            <Route path="/user/Login" component={UserLogin}/>
+                            <Route path="/user/ChangePass" component={UserChangePass}/>
+                            <Route path="/Form" component={IFormTest}/>
+                            <Route path="/FormModal" component={IFormModalTest}/>
+                            <Route path="/Upload" component={UploadTest}/>
+                            <Route path="/TreePage" component={TreePageTest}/>
+                        </Layout.Content>
                     </div>
                 </Router>
             </Layout>
@@ -42,7 +42,13 @@ class App extends React.Component<{}, {}> {
 
 class UserLogin extends React.Component<any, any> {
     render() {
-        return ( <User operate="login" url="/user/login"/> );
+        return (
+            <Row type="flex" justify="center">
+                <Col span={10}>
+                    <User operate="login" url="/user/login"/>
+                </Col>
+            </Row>
+        );
     }
 }
 class UserChangePass extends React.Component<any, any> {

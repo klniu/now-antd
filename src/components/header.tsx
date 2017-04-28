@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Row, Col, Menu, Icon} from 'antd';
+import {Row, Col, Menu, Icon, Layout} from 'antd';
 import {Link} from 'react-router-dom';
 const SubMenu = Menu.SubMenu;
 import '../styles/header.css';
@@ -74,7 +74,7 @@ export default class Header extends React.Component<HeaderProps, HeaderStates> {
             }
         }
         return (
-            <header id="header">
+            <Layout.Header id="header">
                 <Row>
                     <Col lg={4} md={6} sm={7} xs={24}>
                         <Link to="/" className="logo">
@@ -89,7 +89,7 @@ export default class Header extends React.Component<HeaderProps, HeaderStates> {
                         </Menu>
                     </Col>
                 </Row>
-            </header>
+            </Layout.Header>
         );
     }
 }
