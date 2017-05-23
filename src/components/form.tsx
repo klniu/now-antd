@@ -120,7 +120,7 @@ class FormGroup extends React.Component<FormGroupAndAntdProps, FormGroupStates> 
             submitButtons.push((
                 <Col key="cancel" span={6} offset={3}>
                     <Form.Item>
-                        <Button onClick={this.props.onCancel}>提交</Button>
+                        <Button onClick={this.props.onCancel}>取消</Button>
                     </Form.Item>
                 </Col>));
         }

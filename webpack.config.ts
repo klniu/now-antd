@@ -71,7 +71,19 @@ export default {
                 test: /\.(ts|tsx)$/,
                 use: [
                     {
-                        loader: 'babel-loader'
+                        loader: 'babel-loader',
+                        options: {
+                                'presets': [
+                                    ['env', {
+                                        'targets': {
+                                            'browsers': ['last 2 versions', 'safari >= 7'],
+                                            'node': true
+                                        },
+                                        'modules': false
+                                    }]
+                                ],
+                                'plugins': [['import', {'libraryName': 'antd', 'style': 'css' }]]
+                            }
                     }, {
                         loader: 'awesome-typescript-loader'
                     }

@@ -8,6 +8,7 @@ import {UploadModal} from './components/upload';
 import {Layout, message, Row, Col} from 'antd';
 import {default as Header, TitleLink} from './components/header';
 import TreePage from './components/treePage';
+import './App.css';
 
 class App extends React.Component<{}, {}> {
     render() {

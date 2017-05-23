@@ -1,4 +1,7 @@
 #app {
-    background-color: ;
-
+}
+#app #content {
+    margin: 50px;
+    padding: 20px;
+    background-color: #ffffff;
 }
